@@ -143,6 +143,20 @@ function Scene()
 				ctx.textAlign = "center";
 				ctx.fillText("Click the apples for details about the insurance packages", 400, 55);
 				ctx.fillText("we can offer for your company.", 400, 85);
+				if(mouseX > 10 && mouseX < 200 && mouseY > canvas.height - 30 && mouseY < canvas.height)
+				{
+					ctx.fillStyle = "White";
+					ctx.font = "15px Arial";
+					ctx.textAlign = "left";
+					ctx.fillText("<< Change company details", 10, canvas.height - 15);
+				}
+				else
+				{
+					ctx.fillStyle = "Orange";
+					ctx.font = "15px Arial";
+					ctx.textAlign = "left";
+					ctx.fillText("<< Change company details", 10, canvas.height - 15);
+				}
 				break;
 			default:
 				break;
@@ -228,6 +242,13 @@ function Scene()
 							packageWindow.hide = true;
 						}
 						
+					}
+					else
+					{
+						if(mouseX > 10 && mouseX < 200 && mouseY > canvas.height - 30 && mouseY < canvas.height)
+						{
+							Reset();
+						}
 					}
 				}
 				break;
@@ -904,13 +925,16 @@ function PackageWindow()
 
 function Reset()
 {
+	clearInterval(loop);
 	isDone = false;
-	currentValues = {
-		"industry" : 0,
-		"employees" : 0,
-		"sickleaves" : 0,
-		"package" : 0
-		}
+	currentScene.index = -1;
+	WaterCans = [];
+	PoisonCans = [];
+	FertilizerCans = [];
+	
+	currentValues["sickleaves"] = 0;
+	
+	particle = [];
 	tree = new Tree(400, 620);
 	var xOffsets = [20, 100, 200]
 	var yOffsets = [5, 100, 30]
