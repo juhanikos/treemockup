@@ -13,8 +13,14 @@ function getMousePos(canvas, evt)
 	mouseY = evt.clientY - rect.top;
 }
 
+var mousePressed = false;
+
 canvas.addEventListener('mousedown', function(evt) {
+	mousePressed = true;
 	HandlePress();
+    }, false);
+canvas.addEventListener('mouseup', function(evt) {
+	mousePressed = false;
     }, false);
 canvas.addEventListener('mousemove', function(evt) {
     getMousePos(canvas, evt);

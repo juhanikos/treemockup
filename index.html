@@ -625,12 +625,19 @@ function PackageWindow()
 		w: 50,
 		h: 50
 	}
+	this.selectedInfo = "";
+	this.indexToReturnTo = 0;
+	this.infoToShow {
+		text: "",
+		image: null
+	}
 	
 	this.show = function(index)
 	{
 		switch(index)
 		{
 			case 1:
+				this.indexToReturnTo = index;
 				ctx.fillStyle = "rgba(0,0,0,0.6)";
 				ctx.fillRect(0,0, canvas.width, canvas.height);
 				ctx.drawImage(appleImg, 50,50,canvas.width-100,canvas.height-100);
@@ -643,25 +650,51 @@ function PackageWindow()
 				ctx.fillStyle = "White";
 				if(mouseY > 330 && mouseY < 360)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 330 && mouseY < 360 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "ROI";
+				}
 				ctx.fillText("ROI",canvas.width / 2,350);
 				ctx.fillStyle = "White";
 				if(mouseY > 360 && mouseY < 390)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 360 && mouseY < 390 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "Videos";
+				}
 				ctx.fillText("Videos",canvas.width / 2,380);
 				ctx.fillStyle = "White";
 				if(mouseY > 390 && mouseY < 410)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 390 && mouseY < 410 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "Contacts";
+				}
 				ctx.fillText("Contacts",canvas.width / 2,410);
 				ctx.fillStyle = "White";
 				if(mouseY > 410 && mouseY < 440)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 410 && mouseY < 440 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "General Information";
+				}
 				ctx.fillText("General information",canvas.width / 2,440);
 				ctx.fillStyle = "White";
 				if(mouseY > 440 && mouseY < 470)
-					ctx.fillStyle = "Blue";			
+					ctx.fillStyle = "Blue";
+				if(mouseY > 440 && mouseY < 470 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "Calculation";
+				}					
 				ctx.fillText("Calculation",canvas.width / 2,470);
 				break;
 			case 2:
+				this.indexToReturnTo = index;
 				ctx.fillStyle = "rgba(0,0,0,0.6)";
 				ctx.fillRect(0,0, canvas.width, canvas.height);
 				ctx.drawImage(appleImg, 50,50,canvas.width-100,canvas.height-100);
@@ -674,25 +707,51 @@ function PackageWindow()
 				ctx.fillStyle = "White";
 				if(mouseY > 330 && mouseY < 360)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 330 && mouseY < 360 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "ROI";
+				}
 				ctx.fillText("ROI",canvas.width / 2,350);
 				ctx.fillStyle = "White";
 				if(mouseY > 360 && mouseY < 390)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 360 && mouseY < 390 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "Videos";
+				}
 				ctx.fillText("Videos",canvas.width / 2,380);
 				ctx.fillStyle = "White";
 				if(mouseY > 390 && mouseY < 410)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 390 && mouseY < 410 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "Contacts";
+				}
 				ctx.fillText("Contacts",canvas.width / 2,410);
 				ctx.fillStyle = "White";
 				if(mouseY > 410 && mouseY < 440)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 410 && mouseY < 440 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "General Information";
+				}
 				ctx.fillText("General information",canvas.width / 2,440);
 				ctx.fillStyle = "White";
 				if(mouseY > 440 && mouseY < 470)
-					ctx.fillStyle = "Blue";			
+					ctx.fillStyle = "Blue";
+				if(mouseY > 440 && mouseY < 470 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "Calculation";
+				}					
 				ctx.fillText("Calculation",canvas.width / 2,470);
 				break;
 			case 3:
+				this.indexToReturnTo = index;
 				ctx.fillStyle = "rgba(0,0,0,0.6)";
 				ctx.fillRect(0,0, canvas.width, canvas.height);
 				ctx.drawImage(appleImg, 50,50,canvas.width-100,canvas.height-100);
@@ -705,23 +764,66 @@ function PackageWindow()
 				ctx.fillStyle = "White";
 				if(mouseY > 330 && mouseY < 360)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 330 && mouseY < 360 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "ROI";
+				}
 				ctx.fillText("ROI",canvas.width / 2,350);
 				ctx.fillStyle = "White";
 				if(mouseY > 360 && mouseY < 390)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 360 && mouseY < 390 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "Videos";
+				}
 				ctx.fillText("Videos",canvas.width / 2,380);
 				ctx.fillStyle = "White";
 				if(mouseY > 390 && mouseY < 410)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 390 && mouseY < 410 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "Contacts";
+				}
 				ctx.fillText("Contacts",canvas.width / 2,410);
 				ctx.fillStyle = "White";
 				if(mouseY > 410 && mouseY < 440)
 					ctx.fillStyle = "Blue";
+				if(mouseY > 410 && mouseY < 440 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "General Information";
+				}
 				ctx.fillText("General information",canvas.width / 2,440);
 				ctx.fillStyle = "White";
 				if(mouseY > 440 && mouseY < 470)
-					ctx.fillStyle = "Blue";			
+					ctx.fillStyle = "Blue";
+				if(mouseY > 440 && mouseY < 470 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = 4;
+					this.selectedInfo = "Calculation";
+				}					
 				ctx.fillText("Calculation",canvas.width / 2,470);
+				break;
+			case 4:
+				ctx.fillStyle = "rgba(0,0,0,0.6)";
+				ctx.fillRect(0,0, canvas.width, canvas.height);
+				ctx.drawImage(appleImg, 50,50,canvas.width-100,canvas.height-100);
+				ctx.drawImage(close, this.Close.x,this.Close.y,this.Close.h,this.Close.w);
+				ctx.textAlign="center"; 
+				ctx.font = "60px Arial";
+				ctx.fillStyle = "Orange";
+				ctx.fillText(this.selectedInfo,canvas.width / 2,300);
+				ctx.textAlign="center"; 
+				ctx.font = "20px Arial";
+				ctx.fillStyle = "Orange";
+				if(mouseY > 540 && mouseY < 570 && mouseX > canvas.width/2 - 50 && mouseX < canvas.width/2 + 50 && mousePressed)
+				{
+					currentScene.packageIndex = this.indexToReturnTo;
+				}	
+				ctx.fillText("Back",canvas.width / 2,560);
 				break;
 			default:
 				break;
